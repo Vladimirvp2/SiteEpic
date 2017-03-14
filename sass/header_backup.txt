@@ -1,0 +1,293 @@
+@import bourbon
+@import fonts.sass
+@import vars.sass
+
+body
+	font-size: 16px
+	min-width: 320px
+	position: relative
+	line-height: 1.6 
+	font-family: "OpenSansRegular", sans-serif 
+	overflow-x: hidden
+	color: #333
+	background-image: url("../imgs/parket_background.jpg")
+	// set the lengt of site
+	height: 2500px
+
+
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6
+	font-family: "OpenSansLight", sans-serif
+	font-weight: normal
+
+h3, 
+.h3
+	font-size: 320%		
+
+
+// ================================== logo section begin =============================================
+.logo 
+	display: block
+	width: 80px
+	margin: 15px 0px 
+	//float: left
+	img
+		width: 100%	
+
+.logo-company-name
+	font-family: "ImpactRegular", sans-serif
+	font-weight: normal
+	text-align: left
+	font-size: 30px
+	color: rgb(255,255,255)
+	margin: 10px 5px 0px 0px
+	padding: 5px 10px
+	line-height: 80%;
+
+
+.logo-company-slogan
+	font-family: "ImpactRegular", sans-serif
+	font-weight: normal
+	text-align: left
+	font-size: 18px
+	color: rgb(255,255,255)
+	margin: 5px 5px 0px 0px
+	padding: 0px 10px
+	line-height: 80%;	
+
+
+.logo-company-phone
+	font-family: "OpenSansBold", sans-serif
+	font-weight: normal
+	text-align: left
+	font-size: 14px
+	color: rgb(255,255,255)
+	margin: 0px 5px 0px 0px
+	padding: 5px 10px
+	line-height: 80%;
+// ================================== logo section end =============================================			
+
+
+.nav-background
+	background-color: $header_color
+
+.white-background
+	background-color: rgb(255,255,255)
+	box-shadow: 0px 14px 14px black
+
+.hidden-menu-wrapper
+	padding: 0px
+	margin: 0px	
+
+
+
+.site-end
+	position: relative
+	left: 100px;
+	top: 350px;	
+
+
+.site-content
+	position: relative
+	border: 3px solid #73AD21
+	z-index: 1
+
+	.site-empty-header
+		display: block
+		height: 88px
+
+	.menu-line
+
+
+.full-width
+	padding-left: 0px
+	padding-right: 0px
+
+
+// ================================== menu section begin =============================================
+.main-menu
+	ul
+		list-style-type: none
+		margin: 16px 10px auto 0px
+		padding: 0px 0px
+		text-align: right
+		li
+			display: inline-block
+			text-align: center
+			margin: 0px 0px
+			padding: 10px 5px
+			a
+				font-family: "OpenSansBold", sans-serif
+				font-weight: normal
+				font-size: 20px
+				//color: rgb(240,190,84)
+				color: $color_menu_normal
+				margin: 10px 0px 0px 0px 
+				padding: 0px 0px 0px 5px
+				&:hover
+					+mt($anim_menu_time)
+					text-decoration: none
+					color: $color_white
+
+
+
+.hidden-menu
+	display: none
+	background-color: $header_color
+	margin: 0px 0px
+	padding: 0px 0px
+	ul
+		list-style-type: none
+		padding: 0px
+		margin: 30px 0 0px 0
+		li
+			text-align: center
+			display: block
+			margin: 0px 0px
+			padding: 10px 5px
+			border-bottom: solid $color_menu_normal 1px
+			+mt($anim_menu_time)
+			a
+				font-family: "OpenSansBold", sans-serif 
+				font-weight: normal
+				font-size: 20px
+				color: $color_menu_normal
+				padding: auto
+				margin: 0px
+				text-align: center
+
+				&:active
+					text-decoration: underline
+				&:hover
+					+mt($anim_menu_time)
+					color: $color_white
+					text-decoration: none
+			&:hover
+				background-color: $color_golden
+
+
+
+// menu toggle button
+.toggle-mnu 
+  display: block
+  width: 28px
+  height: 28px
+  margin-top: 14px
+
+  span:after, span:before 
+    content: ""
+    position: absolute
+    left: 0
+    top: 9px
+
+  span:after
+    top: 18px
+
+  span 
+    position: relative
+    display: block
+
+  span, span:after, span:before
+    width: 100%
+    height: 2px
+    background-color: #fff
+    transition: all 0.3s
+    backface-visibility: hidden
+    border-radius: 2px
+
+
+  &.on span 
+    background-color: transparent
+
+  &.on span:before 
+    transform: rotate(45deg) translate(-1px, 0px)
+
+  &.on span:after 
+    transform: rotate(-45deg) translate(6px, -7px)
+
+  position: absolute
+  top: 10px
+  right: 30px
+
+
+// ================================== menu section end =============================================
+
+// ================================== slider section begin =============================================
+
+.base-slider-button
+	color: $color_slider_buttons_text
+	background-color: $color_orange
+	//border: none
+	border-radius: 0px
+	opacity: .75
+	border-color: $color_slider_buttons_text
+	font-family: "UbuntuBold", sans-serif
+	font-weight: normal
+	font-size: 22px
+	margin: 0px 5px
+	width: $button_length
+	&:hover
+		+mt($anim_menu_time)
+		border-color: $color_slider_buttons_text
+		background-color: $color_orange
+		opacity: 1
+
+ 
+.middle-slider-button
+	position: absolute
+	left: 50%
+	bottom: 30%
+
+.info-button  
+	@extend .base-slider-button
+
+
+.order-button 
+	@extend .base-slider-button
+	position: absolute
+	right: 20%
+	bottom: 30%
+
+.count-button 
+	@extend .base-slider-button
+	position: absolute
+	left: 20%
+	bottom: 30%	
+
+// slider buttons for non large resolution begin
+.middle-count-button		
+	position: absolute
+	left: 50%
+	bottom: 20%
+
+.middle-info-button
+	position: absolute
+	left: 50%
+	bottom: 10%
+
+.middle-order-button
+	position: absolute
+	left: 50%
+	bottom: 0%
+
+
+.count-button-hide
+	@extend .base-slider-button
+
+.info-button-hide
+	@extend .base-slider-button	
+
+.order-button-hide
+	@extend .base-slider-button	
+
+// slider buttons for non large resolution end		
+
+ 
+.carousel
+ 	.carousel-caption
+ 		padding-bottom: 38%
+		.slider-frame-description
+			font: 26px OpenSansLight, sans-serif
+			font-weight: normal	
+
+// ================================== slider section end =============================================	

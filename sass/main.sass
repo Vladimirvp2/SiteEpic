@@ -1,0 +1,618 @@
+@import bourbon
+@import vars.sass
+
+//Load Libs SASS
+@import "app/libs/animate/animate.sass"
+@import "app/libs/font-awesome/css/font-awesome.sass"
+@import "app/libs/Magnific-Popup/magnific-popup.sass"
+@import "app/libs/owl-carousel/assets/owl.carousel.sass"
+@import "app/libs/selectize/dist/css/selectize"
+
+//@import "app/libs/jstree/themes/default/style.sass"
+
+
+
+.bootstrap-colomn-padding0
+	padding-left: 0px
+	padding-right: 0px	
+  
+
+
+// ================================== galery section begin ===========================================
+
+a.right.carousel-control,
+a.left.carousel-control
+	height: 0px
+
+
+//chevrons
+.carousel-control .icon-prev, 
+.carousel-control .icon-next 
+	position: absolute
+	top: -70px
+	color: $gallery-controls-color
+
+.gallery,
+.gallery-small
+	padding-bottom: 50px 
+
+	.col-xs-1, .col-sm-1, .col-md-1, .col-lg-1, .col-xs-2, .col-sm-2, .col-md-2, .col-lg-2, .col-xs-3, .col-sm-3, .col-md-3, .col-lg-3, .col-xs-4, .col-sm-4, .col-md-4, .col-lg-4, .col-xs-5, .col-sm-5, .col-md-5, .col-lg-5, .col-xs-6, .col-sm-6, .col-md-6, .col-lg-6, .col-xs-7, .col-sm-7, .col-md-7, .col-lg-7, .col-xs-8, .col-sm-8, .col-md-8, .col-lg-8, .col-xs-9, .col-sm-9, .col-md-9, .col-lg-9, .col-xs-10, .col-sm-10, .col-md-10, .col-lg-10, .col-xs-11, .col-sm-11, .col-md-11, .col-lg-11, .col-xs-12, .col-sm-12, .col-md-12, .col-lg-12 
+		padding-left: 0px;
+		padding-right: 0px; 	
+
+.gallery-item
+	margin: 1px
+	display: block
+	overflow: hidden
+	.img-responsive
+		margin: auto
+		+mt($anim_menu_time) 
+	&:hover
+		.gallery-item-content
+			//transform: scale(0.9)
+			opacity: 1
+		.img-responsive
+			transform: scale(1.2)       
+	.gallery-item-content
+		display: block
+		position: absolute
+		top: 0%
+		left: 0%
+		width: 100%
+		height: 100%
+		background-color: rgba(255,255,255,0.70)
+		transition: all $anim_menu_time ease-in-out     
+		text-align: center
+		padding-top: 30%
+		opacity: 0
+		overflow: hidden
+		i
+			color: $gallery-controls-color
+			font-size: 24px
+		.carousel-caption
+			padding-bottom: 7%;
+			color: $gallery-controls-color
+			font-size: 16px
+			line-height: 100%
+
+
+.gallery-small
+	.gallery-item   
+		.gallery-item-content
+			display: block
+			position: absolute
+			padding-top: 30%
+			i
+				font-size: 20px
+			.carousel-caption
+				padding-bottom: 7%;
+				font-size: 16px
+				line-height: 100%               
+
+// controlls
+.carousel-indicators     
+	.active 
+		background-color: $gallery-controls-color
+	li
+		border: 1px solid $gallery-controls-color   
+	position: absolute
+	bottom: -40px
+
+
+.carousel-control 
+	width: 10%
+	.icon-prev, .icon-next 
+	font-size: 60px
+
+
+// dialog
+.gallery-popup
+	position: relative
+	top: -42px
+	background-color: #fff
+	display: block
+	max-width: 700px
+	margin: 5% auto
+	text-align: center
+
+	.responsive-img
+		width: 90%
+		margin: 0% auto
+		padding: 1% auto
+
+	.h2 
+		font-family: "OpenSansRegular", sans-serif
+		font-size: 180%
+		word-wrap: break-word
+
+
+
+// popup fade animation
+.mfp-fade
+  &.mfp-bg
+    opacity: 0
+    transition: all $gallery_dialog_show_hide_time ease-out
+    &.mfp-ready
+      opacity: 0.8
+    &.mfp-removing
+      opacity: 0
+  &.mfp-wrap
+    .mfp-content
+      opacity: 0
+      transition: all $gallery_dialog_show_hide_time ease-out
+    &.mfp-ready .mfp-content
+      opacity: 1
+    &.mfp-removing .mfp-content
+      opacity: 0       
+   
+
+
+// popup zoom animation
+.mfp-with-zoom
+  .mfp-container, &.mfp-bg
+    opacity: 0
+    -webkit-backface-visibility: hidden
+    /* ideally, transition speed should match zoom duration
+    -webkit-transition: all 0.3s ease-out
+    -moz-transition: all 0.3s ease-out
+    -o-transition: all 0.3s ease-out
+    transition: all 0.3s ease-out
+  &.mfp-ready
+    .mfp-container
+      opacity: 1
+    &.mfp-bg
+      opacity: 0.8
+  &.mfp-removing
+    .mfp-container, &.mfp-bg
+      opacity: 0
+
+    
+
+
+// ================================== galery section end ===========================================
+
+
+
+
+// ================================== service section begin ===========================================
+
+// vars
+$services-panels_height: 500px
+
+
+
+
+.services
+	padding-bottom: 25px 
+	//box-shadow:  0px 14px 14px black 
+        //-10px 8px 15px gray, 10px 8px 15px gray
+
+	.col-xs-1, .col-sm-1, .col-md-1, .col-lg-1, .col-xs-2, .col-sm-2, .col-md-2, .col-lg-2, .col-xs-3, .col-sm-3, .col-md-3, .col-lg-3, .col-xs-4, .col-sm-4, .col-md-4, .col-lg-4, .col-xs-5, .col-sm-5, .col-md-5, .col-lg-5, .col-xs-6, .col-sm-6, .col-md-6, .col-lg-6, .col-xs-7, .col-sm-7, .col-md-7, .col-lg-7, .col-xs-8, .col-sm-8, .col-md-8, .col-lg-8, .col-xs-9, .col-sm-9, .col-md-9, .col-lg-9, .col-xs-10, .col-sm-10, .col-md-10, .col-lg-10, .col-xs-11, .col-sm-11, .col-md-11, .col-lg-11, .col-xs-12, .col-sm-12, .col-md-12, .col-lg-12 
+		padding-left: 0px;
+		padding-right: 0px; 
+
+
+	.services-panels
+		height: $services-panels_height
+		// custom scrollbar
+		.vscrollerbar
+			width: 10px
+			background-color: #b9b9b9
+			border-radius: 5px
+			//padding: 0px 15px 0px 0px
+
+	.navigation-panel,
+	.navigation-panel-small
+		background-color: rgb(241,203,124)
+		//background-color: rgb(138,138,138)
+		overflow: auto
+		height: $services-panels_height
+		padding: 10px 5px 5px 5px 5px
+		li
+			font-size: 22px;
+
+	.navigation-panel-small
+		height: 100%
+
+	.content-panel
+		background-color: rgb(240,240,240) 
+		overflow: auto
+		height: $services-panels_height
+		padding: 5px 5px 15px 5px
+		.h6,
+		h6
+			text-align: justify
+			text-justify: inter-word
+		.col-xs-1
+			width: 0%
+
+
+
+
+.jstree-default
+	.jstree-anchor
+    	height: 34px !important		
+
+
+
+// side panel
+
+.sidenav
+  height: $services-panels_height
+  width: 0
+  //position: fixed
+  position: absolute
+  z-index: 10
+  top: 0
+  left: 0
+  bottom: 0
+  background-color: #111
+  overflow-x: hidden
+  //overflow: auto
+  transition: 0.5s
+  padding-top: 0px
+  > a
+    padding: 8px 8px 8px 32px
+    text-decoration: none
+    font-size: 25px
+    color: #818181
+    display: block
+    transition: 0.3s
+  > p
+    padding: 8px 8px 8px 32px
+    text-decoration: none
+    font-size: 25px
+    color: #818181
+    transition: 0.3s
+    display: block
+  a:hover
+    color: #f1f1f1
+
+.offcanvas a:focus
+  color: #f1f1f1
+
+.sidenav .closebtn
+  position: absolute
+  top: 0
+  right: 25px
+  font-size: 36px
+  margin-left: 50px
+
+@media screen and (max-height: 450px)
+  .sidenav
+    padding-top: 15px
+    a
+      font-size: 18px
+
+
+
+
+.toggle-mnu-small 
+	position: absolute
+	top: -50px
+	left: 0px
+
+
+.toggle-mnu-small span, .toggle-mnu-small span::after, .toggle-mnu-small span::before
+    width: 100%;
+    height: 2px;
+    background-color: #000
+
+
+.contacts-buttons
+	.left-button-wrapper
+		text-align: center
+		margin: 6px
+		.count-button
+			@extend .base-button
+			position: absolute
+			right: 0px
+			top: 0px
+			margin: 2px 20px
+			background-color: $color_orange
+			&:hover
+				background-color: $color_orange
+
+	.right-button-wrapper
+		text-align: center
+		margin: 6px
+		.order-button
+			@extend .base-button
+			position: absolute
+			left: 0px
+			top: 0px
+			margin: 2px 20px
+			background-color: $color_orange
+			&:hover
+				background-color: $color_orange
+
+
+
+
+
+// ================================== service section end ===========================================
+
+
+
+// ================================== comments section begin ===========================================
+// vars
+$face_radius: 100px
+
+
+.testimonials
+	height: 700px + $height_testimonials_adder
+
+	.testimonials-item
+		text-align: center
+		margin-top: 20px
+		&:hover
+			.testimonials-desc
+				border-bottom: 5px solid $color_orange
+			.rounded-img-wrap
+				img
+					width: $face_radius*1.05
+					height : $face_radius*1.05
+					border-radius: $face_radius*1.05
+					border: 5px solid $color_orange
+
+		.testimonials-desc
+			background-color: $color_light_yellow
+			margin: 30px 0px 20px 0px
+			padding: 10px
+			border-radius: 2px
+			position: relative
+			border-bottom: 5px solid $color_white
+			box-shadow: 0px 14px 14px black
+			+mt($anim_time)
+			&::before
+				content: ''
+				position: absolute
+				top: -16px
+				transform: translateX(-16px)
+				@include triangle(32px, $color_light_yellow, up)
+
+	.rounded-img-wrap
+		img
+			+mt($anim_time)
+			width: $face_radius
+			height : $face_radius
+			border-radius: $face_radius
+			border: 5px solid $color_white
+			box-shadow: rgba(0,0,0,.25) 0 0 10px
+
+	.h5,
+	h5
+		text-shadow: 1px 1px 1px #111
+
+	.h2,
+	h2
+		margin-top: 50px
+
+
+
+.leave-testimonial-button-wrapper
+	text-align: center
+	height: 150px		
+	.leave-testimonial-button  
+		@extend .base-button 
+		background-color: $color_orange
+		&:hover
+			background-color: $color_orange
+		&:active
+			background-color: $color_orange	
+
+// ================================== comments section end ===========================================
+
+
+
+
+
+
+// ================================== contacts section begin ===========================================
+
+//vars
+$social_media_icon_size: 45px
+
+.contacts
+	background-color: $color_light_yellow 
+	h2,
+	.h2
+		margin-top: 20px
+	.contacts-text
+		padding: 20px
+		i.fa-phone
+			padding: 0px 5px
+			font-size: 34px
+		i.fa-envelope
+			font-size: 28px
+			padding: 0px 3px
+		i.fa-envelope.first	
+			margin-top: 10px
+		p
+			margin: 0px
+			font-size: 125%
+			//text-shadow: 1px 1px 4px #333
+
+	.social
+		margin-top: 100px
+		margin-bottom: 30px
+		text-align: center
+		h4,
+		.h4
+			font-size: 160%
+			font-family: "OpenSansRegular", sans-serif
+			font-weight: normal
+			margin-bottom: 30px
+			
+		.social-icons
+			img
+				width: $social_media_icon_size
+				height: $social_media_icon_size
+				border-radius: $social_media_icon_size
+				margin: 5px 12px
+				+mt($anim_menu_time)
+				opacity: 1.0
+			a
+				&:hover
+					text-decoration: none
+					img
+						opacity: 0.8	
+
+	.contact-form-title
+		text-align: center
+		padding: 0px 30px
+		p
+			text-align: center
+			font-size: 120%
+			font-family: "OpenSansRegular", sans-serif
+			font-weight: normal
+			margin-top: 20px
+			margin-bottom: 20px
+			line-height: 130%		
+
+	.contact-form
+		width: 80%
+		margin: auto
+		label
+			margin: 0px
+		.form-group
+			margin: 0px 0px 10px 0px	
+		.submit-button-wrapper
+			margin: 5px 5px 15px 5px
+			.submit-button
+				display: block
+				margin: auto
+
+	
+	.submit-button  
+		@extend .base-button
+		margin: 10px 0px
+		background-color: $color_orange
+		&:hover
+			background-color: $color_orange	
+
+
+.contacts-dialog
+	position: relative
+	top: -42px
+	background-color: $color_light_yellow
+	display: block
+	max-width: 500px
+	margin: 5% auto
+	//text-align: center
+
+	.contact-form-title
+		text-align: center
+		padding: 0px 50px
+		p
+			text-align: center
+			font-size: 120%
+			font-family: "OpenSansRegular", sans-serif
+			font-weight: normal
+			margin-top: 5px
+			margin-bottom: 10px
+			line-height: 130%			
+
+	.contact-form
+		width: 90%
+		margin: auto
+		label
+			margin: 0px
+		.form-group
+			margin: 0px 0px 10px 0px	
+		.submit-button-wrapper
+			margin: 15px 5px 15px 5px
+			.submit-button
+				display: block
+				margin: auto
+
+	
+	.submit-button  
+		@extend .base-button
+		margin: 10px 0px
+		background-color: $color_orange
+		&:hover
+			background-color: $color_orange								
+
+
+// ================================== contacts section end ===========================================
+// ================================== footer section begin ===========================================
+
+
+.footer
+	.logo-company-name
+		margin-top: 10px
+	.company-phone
+		text-align: right
+		margin: 10px auto
+		color: rgb(200, 200, 200)
+	.social-header
+		text-align: center
+		color: rgb(200, 200, 200)
+	.copy-rights
+		text-align: center
+		color: rgb(100, 100, 100)
+	.footer-social
+		text-align: center
+		margin: 40px 0px 25px 0px
+		.social-icons
+			img
+				width: $social_media_icon_size
+				height: $social_media_icon_size
+				border-radius: $social_media_icon_size
+				margin: 5px 12px
+				+mt($anim_menu_time)
+				opacity: 1.0
+			a
+				&:hover
+					text-decoration: none
+					img
+						opacity: 0.8
+
+
+
+
+
+// ================================== footer section end ===========================================
+
+
+// testimonials dialog begin 
+
+.testimonials-dialog
+	position: relative
+	top: -10px
+	background-color: $color_white
+	display: block
+	max-width: 700px
+	margin: 5% auto	
+	.responsive-img
+		width: 100%
+
+
+
+
+.arrow-up-wrapper
+	display: block
+	cursor: pointer
+	position: fixed
+	bottom: 50px
+	right: 50px
+	z-index: 5
+	background-color: none
+	border-radius: 2px
+	+mt($anim_menu_time)
+	opacity: .8
+	&:hover
+		background-color: $color_golden
+		i
+			color: $color_white
+	i
+		padding: 10px
+		color: $color_golden
+	
+
+
+
+
+//ALWAYS END
+@import "_media.sass" 

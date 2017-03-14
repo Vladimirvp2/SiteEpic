@@ -1,0 +1,81 @@
+$bootstrap_grid_width: 1170px
+
+$btn: #14B75A
+$accent: #ECB124
+$blue: #414E5B
+$button_length: 250px
+$button_border_radius: 2px
+
+// ====================== colors start ========================
+$header_color: rgb(0,0,0)
+$color_white: rgb(255,255,255)
+$color_yellow: rgb(240,190,84)
+$color_light_yellow: rgb(241,203,124)
+$color_golden: rgb(233,164,15)
+$color_orange: rgb(206,95,19)
+$color_green: rgb(108, 163, 102)
+$color_light_red: rgb(240, 95, 61)
+$color_menu_normal: rgb(190,190,190)
+
+$color_slider_buttons_text: rgb(225,225,225)
+//
+
+$hidden-menu-hover-background: #ECB124 
+
+$gallery-controls-color: #333333
+$gallery-caption-color: rgba(65, 78, 91, .6)
+
+// ====================== colors end ========================
+
+
+// ====================== animation time begin ========================
+// standart animation time
+$anim_time: .5s  
+$anim_menu_time: .4s
+
+$gallery_dialog_show_hide_time: .25s
+
+=mt($time)
+	transition: all $time ease
+
+// ====================== animation time end ========================
+
+
+.base-button
+	color: $color_slider_buttons_text
+	background-color: $color_light_red
+	border: none
+	border-radius: $button_border_radius
+	opacity: .75
+	font-family: "OpenSansRegular", sans-serif
+	font-weight: normal
+	font-size: 22px
+	margin: 0px 5px
+	width: $button_length
+	padding: 5px 5px
+	box-shadow: 0px 2px 6px black
+	+mt($anim_menu_time)
+	&:hover
+		background-color: $color_light_red
+		color: $color_slider_buttons_text
+		opacity: 1
+	&:active
+		box-shadow: none
+
+
+
+// ====================== slider ========================	
+$buttons_position_vertical: 75%
+
+
+
+
+// ====================== testimonials begin ========================
+// if the testemonials are longer and do not have enough space add some value
+$height_testimonials_adder: -90px
+
+
+
+
+
+// ====================== testimonials end ==========================
